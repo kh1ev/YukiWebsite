@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Anton } from "next/font/google";
 import "../styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const anton = Anton({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
 	title: "Yuki-Suou Discord Bot",
@@ -11,17 +11,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} text-white`}>
+			<body className={`${anton.className} text-white`}>
 				<div className="fixed inset-0 z-0 pointer-events-none">
-					{/* Global background color gradient */}
-					<div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
-					{/* Global background texture */}
-					<div className="absolute inset-0 bg-[url('/assets/image/background.png')] bg-cover bg-center opacity-30" />
-					{/* Global dot pattern */}
+					{/* Global solid darker violet background */}
+					<div className="absolute inset-0 bg-[#2a2342]" />
+					{/* Global background texture, lebih gelap & lebih samar */}
+					<div className="absolute inset-0 bg-[url('/assets/image/background.png')] bg-cover bg-center opacity-10" />
+					{/* Global dot pattern, lebih gelap & samar */}
 					<div
-						className="absolute inset-0 opacity-20 animate-moveBackground"
+						className="absolute inset-0 opacity-30 animate-moveBackground"
 						style={{
-							backgroundImage: `radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.1) 1px, transparent 0)`,
+							backgroundImage: `radial-gradient(circle at 1px 1px, #382f5e 1px, transparent 0)`,
 							backgroundSize: "40px 40px",
 						}}
 					/>

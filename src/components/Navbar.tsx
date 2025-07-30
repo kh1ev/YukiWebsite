@@ -61,11 +61,7 @@ export default function Navbar({
 				initial={{ y: -100, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-					isScrolled
-						? "bg-amber-950/90 backdrop-blur-md border-b border-amber-800/50"
-						: "bg-transparent"
-				}`}
+				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${"bg-transparent"}`}
 			>
 				<div className="max-w-6xl mx-auto px-3 xs:px-4 sm:px-6 py-3 xs:py-4">
 					<div className="flex items-center justify-between">
@@ -78,12 +74,9 @@ export default function Navbar({
 						>
 							<div
 								className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl font-bold"
-								style={{
-									fontFamily: "Bebas Neue, Impact, Arial Black, sans-serif",
-								}}
 							>
-								<span className="text-amber-400">YUKI</span>
-								<span className="text-amber-300">SUOU</span>
+								<span className="text-white">YUKI</span>
+								<span className="text-gray-200">SUOU</span>
 							</div>
 						</motion.div>
 
@@ -99,15 +92,15 @@ export default function Navbar({
 									onClick={() => handleSectionClick(item.id)}
 									className={`group relative px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 ${
 										activeSection === item.id
-											? "text-amber-400 bg-gradient-to-r from-amber-900/30 to-amber-800/30 shadow-sm"
-											: "text-gray-300 hover:text-amber-400 hover:bg-amber-900/20"
+											? "text-white bg-gradient-to-r from-gray-700/70 to-gray-600/70 shadow-sm"
+											: "text-gray-200 hover:text-white hover:bg-gray-700/50"
 									}`}
 								>
 									{item.label}
 									{activeSection === item.id && (
 										<motion.div
 											layoutId="activeIndicator"
-											className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
+											className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-white to-gray-300 rounded-full"
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
 											transition={{ duration: 0.3 }}
@@ -121,7 +114,7 @@ export default function Navbar({
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
-							className="hidden cursor-pointer lg:flex items-center gap-1.5 xs:gap-2 bg-gradient-to-r from-amber-700 to-amber-600 hover:from-amber-800 hover:to-amber-700 text-white px-4 xs:px-5 py-2 xs:py-2.5 rounded-lg xs:rounded-xl font-semibold transition-all duration-300 shadow-lg group"
+							className="hidden cursor-pointer lg:flex items-center gap-1.5 xs:gap-2 bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-800 hover:to-gray-700 text-white px-4 xs:px-5 py-2 xs:py-2.5 rounded-lg xs:rounded-xl font-semibold transition-all duration-300 shadow-lg group"
 						>
 							Get Started
 							<ChevronRight className="w-3 xs:w-3.5 h-3 xs:h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -134,7 +127,7 @@ export default function Navbar({
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							className="lg:hidden relative z-60"
 						>
-							<div className="p-1 xs:p-1.5 rounded-lg xs:rounded-xl hover:bg-amber-900/20 transition-colors text-gray-300 relative z-60">
+							<div className="p-1 xs:p-1.5 rounded-lg xs:rounded-xl hover:bg-gray-700/20 transition-colors text-white relative z-60">
 								<AnimatePresence mode="wait">
 									{isMobileMenuOpen ? (
 										<motion.div
@@ -184,31 +177,27 @@ export default function Navbar({
 							animate={{ x: 0, opacity: 1 }}
 							exit={{ x: "100%", opacity: 0 }}
 							transition={{ type: "spring", damping: 25, stiffness: 200 }}
-							className="fixed top-0 right-0 h-full w-72 xs:w-80 bg-amber-950 shadow-2xl z-50 lg:hidden overflow-y-auto"
+							className="fixed top-0 right-0 h-full w-72 xs:w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
 						>
 							<div className="flex flex-col h-full">
 								{/* Header */}
-								<div className="flex items-center justify-between p-4 xs:p-6 border-b border-amber-800">
+								<div className="flex items-center justify-between p-4 xs:p-6 border-b border-gray-200">
 									<div className="flex items-center gap-2.5 xs:gap-3">
-										<div className="w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 bg-gradient-to-br from-amber-600 to-amber-800 rounded-lg xs:rounded-xl flex items-center justify-center shadow-lg">
+										<div className="w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg xs:rounded-xl flex items-center justify-center shadow-lg">
 											<Bot className="text-white w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5" />
 										</div>
 										<div
 											className="text-base xs:text-lg sm:text-xl font-bold"
-											style={{
-												fontFamily:
-													"Bebas Neue, Impact, Arial Black, sans-serif",
-											}}
 										>
-											<span className="text-amber-400">YUKI</span>
-											<span className="text-amber-300">SUOU</span>
+											<span className="text-white">YUKI</span>
+											<span className="text-gray-300">SUOU</span>
 										</div>
 									</div>
 									<motion.button
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 0.9 }}
 										onClick={() => setIsMobileMenuOpen(false)}
-										className="p-1.5 xs:p-2 rounded-lg xs:rounded-xl hover:bg-amber-900 transition-colors text-gray-400"
+										className="p-1.5 xs:p-2 rounded-lg xs:rounded-xl hover:bg-gray-200 transition-colors text-gray-600"
 									>
 										<X className="w-5 xs:w-5.5 h-5 xs:h-5.5" />
 									</motion.button>
@@ -227,15 +216,15 @@ export default function Navbar({
 												onClick={() => handleSectionClick(item.id)}
 												className={`group relative w-full flex items-center gap-3 xs:gap-4 px-4 xs:px-6 py-3 xs:py-4 text-left transition-all duration-300 ${
 													activeSection === item.id
-														? "bg-gradient-to-r from-amber-900/50 to-amber-800/50 text-amber-400 shadow-sm border-l-4 border-amber-500"
-														: "text-gray-300 hover:text-amber-400 hover:bg-amber-900/30"
+														? "bg-gradient-to-r from-gray-700 to-gray-600 text-white shadow-sm border-l-4 border-white"
+														: "text-white hover:text-white hover:bg-gray-700"
 												}`}
 											>
 												<IconComponent
 													className={`w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5 transition-colors ${
 														activeSection === item.id
-															? "text-amber-400"
-															: "text-gray-500 group-hover:text-amber-400"
+															? "text-white"
+															: "text-gray-300 group-hover:text-white"
 													}`}
 												/>
 												<div className="flex items-center justify-between flex-1">
@@ -243,13 +232,13 @@ export default function Navbar({
 														{item.label}
 													</span>
 													{activeSection === item.id && (
-														<div className="ml-auto w-1.5 xs:w-2 h-1.5 xs:h-2 bg-blue-500 rounded-full" />
+														<div className="ml-auto w-1.5 xs:w-2 h-1.5 xs:h-2 bg-gray-800 rounded-full" />
 													)}
 													<ChevronRight
 														className={`ml-auto transition-transform w-3 xs:w-3.5 sm:w-4 h-3 xs:h-3.5 sm:h-4 ${
 															activeSection === item.id
-																? "text-blue-400"
-																: "text-gray-400 group-hover:translate-x-1 group-hover:text-blue-400"
+																? "text-white"
+																: "text-gray-300 group-hover:translate-x-1 group-hover:text-white"
 														}`}
 													/>
 												</div>
@@ -259,11 +248,11 @@ export default function Navbar({
 								</div>
 
 								{/* CTA Button - Mobile */}
-								<div className="p-4 xs:p-6 border-t border-gray-800">
+								<div className="p-4 xs:p-6 border-t border-gray-200">
 									<motion.button
 										whileHover={{ scale: 1.02 }}
 										whileTap={{ scale: 0.98 }}
-										className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-2.5 xs:py-3 rounded-lg xs:rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 xs:gap-3 group"
+										className="w-full bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-800 hover:to-gray-700 text-white px-4 py-2.5 xs:py-3 rounded-lg xs:rounded-xl font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2 xs:gap-3 group"
 									>
 										Get Started
 										<ChevronRight className="w-3.5 xs:w-4 h-3.5 xs:h-4 group-hover:translate-x-0.5 transition-transform" />
