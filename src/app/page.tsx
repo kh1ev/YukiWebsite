@@ -554,7 +554,9 @@ export default function Home() {
 							className="text-center mb-16"
 						>
 							<div className="mb-6">
-								<div className="text-5xl font-bold text-white">Premium Plans</div>
+								<div className="text-5xl font-bold text-white">
+									Premium Plans
+								</div>
 							</div>
 
 							<p className="text-xl text-amber-200 max-w-3xl mx-auto leading-relaxed mb-2">
