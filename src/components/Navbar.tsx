@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
 	Bot,
@@ -36,7 +36,7 @@ export default function Navbar({
 	activeSection,
 	onSectionChange,
 }: NavbarProps) {
-	const [isScrolled, setIsScrolled] = useState(false);
+	const [, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	useEffect(() => {

@@ -10,7 +10,7 @@ import {
 	Users,
 	Zap,
 } from "lucide-react";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 interface NavItem {
 	id: string;
@@ -124,9 +124,9 @@ const Footer = () => {
 					>
 						<h3 className="text-lg font-semibold text-white">ABOUT US</h3>
 						<div className="space-y-3">
-							{navItems.map((item, index) => (
+							{navItems.map((item) => (
 								<motion.button
-									key={index}
+									key={item.id}
 									onClick={() => scrollToSection(item.id)}
 									whileHover={{ scale: 1.05, x: 5 }}
 									whileTap={{ scale: 0.95 }}
@@ -149,9 +149,9 @@ const Footer = () => {
 							<div>
 								<h3 className="text-lg font-semibold text-white mb-3">LEGAL</h3>
 								<div className="space-y-2">
-									{legalLinks.map((link, index) => (
+									{legalLinks.map((link) => (
 										<motion.a
-											key={index}
+											key={link.href}
 											href={link.href}
 											whileHover={{ scale: 1.05, x: 5 }}
 											whileTap={{ scale: 0.95 }}
@@ -168,9 +168,9 @@ const Footer = () => {
 									INFORMATION
 								</h3>
 								<div className="space-y-2">
-									{infoItems.map((item, index) => (
+									{infoItems.map((item) => (
 										<motion.a
-											key={index}
+											key={item.href}
 											href={item.href}
 											target={item.external ? "_blank" : "_self"}
 											rel={item.external ? "noopener noreferrer" : ""}

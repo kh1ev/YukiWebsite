@@ -159,7 +159,7 @@ const Features = () => {
 						const IconComponent = feature.icon;
 						return (
 							<motion.div
-								key={index}
+								key={feature.title}
 								initial={{ opacity: 0, y: 30 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -184,8 +184,8 @@ const Features = () => {
 										</p>
 
 										<div className="space-y-2 mb-6">
-											{feature.features.map((feat, idx) => (
-												<div key={idx} className="flex items-center gap-2">
+											{feature.features.map((feat) => (
+												<div key={feat} className="flex items-center gap-2">
 													<Star className="w-4 h-4 text-yellow-400 fill-current" />
 													<span className="text-sm text-gray-200">{feat}</span>
 												</div>
