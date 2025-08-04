@@ -72,9 +72,7 @@ export default function Navbar({
 							onClick={() => handleSectionClick("hero")}
 							className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 cursor-pointer group"
 						>
-							<div
-								className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl font-bold"
-							>
+							<div className="text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl font-bold">
 								<span className="text-white">YUKI</span>
 								<span className="text-gray-200">SUOU</span>
 							</div>
@@ -186,9 +184,7 @@ export default function Navbar({
 										<div className="w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg xs:rounded-xl flex items-center justify-center shadow-lg">
 											<Bot className="text-white w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5" />
 										</div>
-										<div
-											className="text-base xs:text-lg sm:text-xl font-bold"
-										>
+										<div className="text-base xs:text-lg sm:text-xl font-bold">
 											<span className="text-white">YUKI</span>
 											<span className="text-gray-300">SUOU</span>
 										</div>

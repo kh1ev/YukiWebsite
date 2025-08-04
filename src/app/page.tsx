@@ -466,7 +466,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				
+
 				{/* Features Section */}
 				<section
 					id="features"
@@ -574,7 +574,11 @@ export default function Home() {
 										"Comprehensive moderation tools to keep your Discord server safe and engaging",
 									icon: Shield,
 									gradient: "from-purple-600 to-purple-700",
-									features: ["Auto Moderation", "Custom Rules", "Member Analytics"],
+									features: [
+										"Auto Moderation",
+										"Custom Rules",
+										"Member Analytics",
+									],
 								},
 								{
 									title: "AI Image Generation",
@@ -594,7 +598,11 @@ export default function Home() {
 										"Lightning-fast responses with optimized performance for the best user experience",
 									icon: Zap,
 									gradient: "from-purple-800 to-purple-900",
-									features: ["Low Latency", "High Uptime", "Scalable Infrastructure"],
+									features: [
+										"Low Latency",
+										"High Uptime",
+										"Scalable Infrastructure",
+									],
 								},
 							].map((feature, index) => {
 								const IconComponent = feature.icon;
@@ -628,7 +636,9 @@ export default function Home() {
 													{feature.features.map((feat) => (
 														<div key={feat} className="flex items-center gap-2">
 															<Star className="w-4 h-4 text-purple-400 fill-current" />
-															<span className="text-sm text-gray-200">{feat}</span>
+															<span className="text-sm text-gray-200">
+																{feat}
+															</span>
 														</div>
 													))}
 												</div>

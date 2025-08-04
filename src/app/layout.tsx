@@ -1,7 +1,7 @@
 import { Anton } from "next/font/google";
 import "../styles/globals.css";
 
-const anton = Anton({ weight: '400', subsets: ["latin"] });
+const anton = Anton({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
 	title: "Yuki-Suou Discord Bot",
