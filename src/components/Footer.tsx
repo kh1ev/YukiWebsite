@@ -10,7 +10,7 @@ import {
 	Users,
 	Zap,
 } from "lucide-react";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 interface NavItem {
 	id: string;
@@ -96,7 +96,7 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className="relative border-t border-gray-700/20">
+		<footer className="relative border-t border-white/20">
 			<div className="relative max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 lg:gap-12">
 					<motion.div
@@ -107,9 +107,9 @@ const Footer = () => {
 						className="space-y-2 xs:space-y-3 sm:space-y-4 lg:space-y-6"
 					>
 						<div className="flex flex-col gap-2">
-							<div className="text-6xl font-black text-amber-400">YUKISUOU</div>
+							<div className="text-6xl font-black text-white">YUKISUOU</div>
 						</div>
-						<p className="text-yellow-400 text-sm leading-relaxed max-w-md">
+						<p className="text-gray-300 text-sm leading-relaxed max-w-md">
 							Stay connected with Yuki Suou! Follow us for updates, maintenance
 							feature, and more.
 						</p>
@@ -124,9 +124,9 @@ const Footer = () => {
 					>
 						<h3 className="text-lg font-semibold text-white">ABOUT US</h3>
 						<div className="space-y-3">
-							{navItems.map((item, index) => (
+							{navItems.map((item) => (
 								<motion.button
-									key={index}
+									key={item.id}
 									onClick={() => scrollToSection(item.id)}
 									whileHover={{ scale: 1.05, x: 5 }}
 									whileTap={{ scale: 0.95 }}
@@ -149,9 +149,9 @@ const Footer = () => {
 							<div>
 								<h3 className="text-lg font-semibold text-white mb-3">LEGAL</h3>
 								<div className="space-y-2">
-									{legalLinks.map((link, index) => (
+									{legalLinks.map((link) => (
 										<motion.a
-											key={index}
+											key={link.href}
 											href={link.href}
 											whileHover={{ scale: 1.05, x: 5 }}
 											whileTap={{ scale: 0.95 }}
@@ -168,9 +168,9 @@ const Footer = () => {
 									INFORMATION
 								</h3>
 								<div className="space-y-2">
-									{infoItems.map((item, index) => (
+									{infoItems.map((item) => (
 										<motion.a
-											key={index}
+											key={item.href}
 											href={item.href}
 											target={item.external ? "_blank" : "_self"}
 											rel={item.external ? "noopener noreferrer" : ""}
@@ -192,7 +192,7 @@ const Footer = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.3 }}
 					viewport={{ once: true, margin: "-50px" }}
-					className="mt-6 xs:mt-8 sm:mt-12 lg:mt-16 pt-4 xs:pt-6 sm:pt-8 border-t border-slate-800/50"
+					className="mt-6 xs:mt-8 sm:mt-12 lg:mt-16 pt-4 xs:pt-6 sm:pt-8 border-t border-white/20"
 				>
 					<div className="flex flex-col space-y-4">
 						<div className="text-center">
